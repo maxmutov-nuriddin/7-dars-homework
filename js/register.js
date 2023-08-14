@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (!userEmail.includes('@')) {
       alert('Пожалуйста, введите корректный email адрес.');
     } else {
-      window.location.href = '../index.html';
+      window.location.href = '../data.html';
     }
   });
 });
