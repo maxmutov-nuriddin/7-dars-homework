@@ -1,0 +1,39 @@
+body {
+  background-image: url(https://img3.akspic.ru/attachments/crops/7/0/3/4/44307/44307-priroda-pihta-dymka-les-ekosistema-1920x1080.jpg);
+}
+
+input,
+span,
+table,
+th,
+td,
+form,
+div,
+.form-select {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+select option {
+  color: black;
+  background-color: transparent !important;
+
+}
+
+input::placeholder {
+  color: #fff !important;
+}
+
+select {
+  color: #fff !important;
+}
+
+.btn {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.modal-content {
+  box-shadow: 20px 20px 120px #000;
+  backdrop-filter: blur(4px);
+}

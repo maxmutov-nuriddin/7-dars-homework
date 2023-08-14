@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>CRM</title>
+</head>
+
+<body>
+
+
+  <header>
+    <nav class="container py-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control student-search" placeholder="Searching students..." />
+        <span class="input-group-text">
+          <select class="form-select position-filter"></select>
+        </span>
+        <span class="input-group-text">
+          <select class="form-select married-filter"></select>
+        </span>
+        <span class="input-group-text">
+          <select class="form-select salary-filter"></select>
+        </span>
+        <button class="btn btn-outline-success text-info border-info open-modal-btn" type="button" data-bs-toggle="modal"
+          data-bs-target="#studentModal">
+          Add person
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <table class="table table-striped table-hover students-table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Address</th>
+              <th scope="col">Birth day</th>
+              <th scope="col">Position</th>
+              <th scope="col">Type position</th>
+              <th scope="col">Salary</th>
+              <th scope="col">Is married ?</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- Modal -->
+  <div class="modal fade" id="studentModal">
+    <div class="modal-dialog">
+      <form class="row g-3 student-form" novalidate>
+        <div class="modal-content border border-2">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Person data</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">FirstName</label>
+              <input type="text" class="form-control" id="firstName" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Your address</label>
+              <input type="text" class="form-control" id="address" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="birthDay" class="form-label">Your birthDay</label>
+              <input type="date" class="form-control" id="birthDay" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="position " class="form-label">Select position </label>
+              <select class="form-select position-select" id="position " required></select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="typePosition " class="form-label">Select type position </label>
+              <select class="form-select typePosition-select" id="typePosition " required></select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="salary" class="form-label">Your salary</label>
+              <input type="number" class="form-control" id="salary" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="isMarried" />
+                <label class="form-check-label" for="isMarried">
+                  Is Married ? 
+                </label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please fill this field !</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary save-btn">
+              Add student
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
